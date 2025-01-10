@@ -93,7 +93,7 @@
     margin: 2px 0px 2px 0px;
     height: 400px;
     width: 90%;
-    border: 5px solid red;
+    /* border: 5px solid red; */
     padding: 10px;
     background-color: aqua;
 }
