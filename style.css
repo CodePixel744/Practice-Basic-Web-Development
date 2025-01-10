@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    /* challenge 1:make the nav items appear in row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    margin: 20px;
+    border: 3px solid red;
+}
+
+.nav-links li {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    /* border:1px solid black; */
+    padding: 20px;
+}
+
+/* Challenge 2: Center the hero content both vertically and horizontally */
+.hero {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .hero-content {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero .hero-content h1 {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: 100;
+}
+
+.hero .hero-content .cta-button {
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    color: black;
+    background-color: yellow;
+}
+
+/* Challenge 3: Display features in a row with equal spacing */
+.features {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+}
+
+.features .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*the above two lines done to center the feature 1 and its description*/
+    /* border: 1px solid red; */
+    margin: 10px;
+    padding: 5px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    align-items: center;
+    padding: 0;
+}
+
+.products .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px 0px 2px 0px;
+    height: 400px;
+    width: 90%;
+    border: 5px solid red;
+    padding: 10px;
+    background-color: aqua;
+}
+
+.products .product-card .without-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 20px 40px 20px;
+    border: 2px solid black;
+}
+
+.products .product-card button {
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    /* Ensure no padding */
+    border: 2px solid black;
+    border-radius: 2em;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+
+    /* Match line-height to height */
+    color: black;
+    background-color: yellow;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-content {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-content .footer-section {
+    margin: 0px 40px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-content .footer-section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
