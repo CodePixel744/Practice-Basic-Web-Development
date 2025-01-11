@@ -2,39 +2,114 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #ff5722;
 }
 
 .nav {
-    /* challenge 1:make the nav items appear in row */
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffeb3b;
+    padding: 10px 20px;
 }
 
 .nav-links {
+    list-style: none;
+    gap: 15px;
+    justify-content: center;
     display: flex;
-    margin: 20px;
-    border: 3px solid red;
-}
-
-.nav-links li {
-    display: flex;
-    margin: 5px;
     flex-direction: column;
-    /* border:1px solid black; */
-    padding: 20px;
+    align-items: center;
 }
 
-/* Challenge 2: Center the hero content both vertically and horizontally */
+@media screen and (max-width: 760px) {
+    .nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px;
+        justify-content: center;
+    }
+}
+
+.nav-links li a {
+    font-size: 1.2em;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+    color: #ff5722;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: blue;
+}
+
 .hero {
-    border: 1px solid black;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.hero-subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+.stat-label {
+    color: #666;
+    margin-top: 5px;
+}
+
 .hero .hero-content {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -43,102 +118,170 @@
 .hero .hero-content h1 {
     display: flex;
     justify-content: center;
-    /* border: 2px solid black; */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 480px) {
+    .hero .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .hero .hero-content {
+        padding: 10px;
+    }
 }
 
 .hero .hero-content .cta-button {
-    /* border: 2px solid black; */
+    width: 100%;
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
-    color: black;
-    background-color: yellow;
+    color: white;
+    background-color: #ff5722;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Challenge 3: Display features in a row with equal spacing */
+@media screen and (max-width:480px) {
+    .hero .hero-content .cta-button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+.hero .hero-content .cta-button:hover {
+    color: white;
+    background-color: #e64a19;
+}
+
 .features {
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
 }
 
 .features .feature {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*the above two lines done to center the feature 1 and its description*/
-    /* border: 1px solid red; */
-    margin: 10px;
-    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    transition: transform 0.3s ease;
 }
 
-.products {
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid black; */
-    align-items: center;
-    padding: 0;
+.feature-link {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
-.products .product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2px 0px 2px 0px;
-    height: 400px;
-    width: 90%;
-    /* border: 5px solid red; */
+.feature-link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.section-title {
+    text-align: center;
+}
+
+
+.product-card {
+    width: 100%;
+    margin: 0;
+    /* border: 1px solid blue; */
     padding: 10px;
-    background-color: aqua;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
-.products .product-card .without-button {
+.product-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.without-button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+.without-button {
+    background-color: gray;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px 20px 40px 20px;
-    border: 2px solid black;
+    justify-content: center;
 }
 
-.products .product-card button {
-    margin: 5px 0px 0px 0px;
+.product-info,
+.price-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-features {
+    text-decoration: none;
+    text-align: center;
+}
+
+.product-card button {
+    margin: 5px 0 0 0;
     padding: 0;
-    /* Ensure no padding */
-    border: 2px solid black;
+    border: 2px solid #4caf50;
     border-radius: 2em;
     width: 100px;
     height: 30px;
     line-height: 30px;
-
-    /* Match line-height to height */
-    color: black;
-    background-color: yellow;
+    color: white;
+    background-color: #65d981;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.product-card button:hover {
+    color: #4caf50;
+    background-color: #e0f7fa;
+}
+
+@media screen and (max-width:480px) {
+    .product-card button {
+        color: blue;
+        background-color: orange;
+    }
 }
 
 .footer {
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffeb3b;
+    padding: 10px 20px;
 }
 
 .footer .footer-content {
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
 }
 
 .footer .footer-content .footer-section {
     margin: 0px 40px;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,8 +289,46 @@
 }
 
 .footer .footer-content .footer-section p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    color: #555;
+    font-style: italic;
+}
+
+@media screen and (max-width: 760px) {
+    .footer .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 60%;
+    }
 }
