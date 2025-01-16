@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe', sans-serif;
 }
 
 button:hover {
@@ -12,9 +12,21 @@ button:hover {
 body {
     margin: 0;
     width: 100%;
+    height: 100%;
     background-color: #f0f8ff;
     color: #333;
     font-family: 'Open Sans', sans-serif;
+    position: relative;
+}
+
+.badge {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: 600;
+}
+
+img {
+    border-radius: 8px;
 }
 
 .mobile-menu-btn {
@@ -27,8 +39,8 @@ body {
 
 .nav {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     background-color: #ffeb3b;
     padding: 10px 20px;
@@ -39,9 +51,12 @@ body {
     gap: 15px;
     justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    font-weight: 600;
+
 }
+
 
 @media screen and (max-width: 760px) {
     .nav {
@@ -210,7 +225,7 @@ body {
 }
 
 .without-button {
-    background-color: gray;
+    background: linear-gradient(to right, gray, lightgray);
     border: 3px solid black;
     display: flex;
     flex-direction: column;
@@ -226,6 +241,14 @@ body {
     justify-content: center;
 }
 
+.current-price,
+.original-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
 .product-info,
 .price-container {
     display: flex;
@@ -238,6 +261,7 @@ body {
     text-decoration: none;
     text-align: center;
 }
+
 
 .product-card button {
     margin: 5px 0 0 0;
@@ -271,7 +295,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #ffeb3b;
-    padding: 10px 20px;
+    padding: 2% 2%;
 }
 
 .footer .footer-content {
